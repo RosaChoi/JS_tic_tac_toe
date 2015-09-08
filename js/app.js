@@ -28,7 +28,8 @@
     bindEvents: function() {
       this.$squares.on('mouseover', this.hoverSquare);
       this.$squares.on('click', this.addSymbol.bind(this));
-      this.$squares.on('click', this.setTime.bind(this));
+      // 5seconds countdown is working in progress
+      // this.$squares.on('click', this.setTime.bind(this));
       this.$reset.on('click', this.resetBoard.bind(this));
     },
     addSymbol: function(event) {
@@ -83,12 +84,13 @@
       }
     },
     setTime: function() {
+      //working in progress
       var targetDate = new Date(),
           seconds = targetDate.getSeconds(),
           _this = this.$time;
       // setInterval(function() {
       //   var currentSec = new Date().getSeconds(),
-      //       seconds_left = 15 - (currentSec - seconds);
+      //       seconds_left = 5 - (currentSec - seconds);
       //   _this.text(seconds_left);
       // }, 1000);
 
